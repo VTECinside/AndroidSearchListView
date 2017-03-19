@@ -41,6 +41,7 @@ public class MainActivity extends ActionBarActivity {
             @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
 
+                // ０文字になった場合リストを再読み込み
                 if(s.toString().equals("")) {
 
                     // reset listview
@@ -63,6 +64,9 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void searchItem(String textToSearch) {
+        // String itemは削除されるリスト for文内の一時変数
+        // String itemsは"Canada","China","Japan","USA"
+        // ArrayList listItemsはアクティブなリストを保持しているオブジェクト
 
         for(String item:items) {
 
